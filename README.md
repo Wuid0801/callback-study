@@ -1,72 +1,19 @@
-# Getting Started with Create React App
+# 콜백함수란
+내생각 - 어떤 함수에서 다른 함수의 매개변수로 전달하여 비동기 처리를 하는 함수
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+StackOverflow의 한 이용자의 답변
+1. 다른 함수의 인자로써 이용되는 함수.
+2. 어떤 이벤트에 의해 호출되어지는 함수.
 
-## Available Scripts
+## 왜 콜백 함수가 필요한가요?
+자바스크립트는 코드를 위에서 아래로 순차적으로 실행 -> 그러나, 코드가 다른 행위가 일어난 뒤에 실행되는 경우도 있고 순차적으로 실행되지 않을 때도 있습니다. -> 비동기 프로그래밍이라고 합니다.
+콜백은 비동기 작업이 완료되면 호출되어 특정 동작을 수행하도록 지정할 수 있기 때문입니다.
 
-In the project directory, you can run:
+## 콜백 함수 예시
+![콜백 코드](https://github.com/Wuid0801/callback-study/assets/105138020/721c0960-80f3-4b14-8df7-bd202a0133be)
+1. CallbackData 함수는 2초 후에 실행되며, 주어진 콜백 함수를 호출
+2. handleData 함수는 콜백 함수로 정의되어 있으며, CallbackData 함수에서 전달된 데이터를 처리
+3. CallbackData(handleData); 코드는 CallbackData 함수를 호출하면서 handleData 함수를 인자로 전달하여, 콜백 함수를 CallbackData 함수 내에서 사용할 수 있도록 함
+4. console.log("CallbackData 함수 호출됨. 비동기 처리 중..."); 코드는 CallbackData 함수가 호출되었음을 표시하고, 이후에 비동기 처리가 진행되는 동안을 보여줌
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# callback-dev
-# callback-study
+![콜백 로그](https://github.com/Wuid0801/callback-study/assets/105138020/486fded9-61c6-4f3b-a04e-da2d5e472c76)
